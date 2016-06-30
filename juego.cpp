@@ -15,9 +15,12 @@ Juego::Juego()
     MusicaJuego.setLoop(true);
     MusicaJuego.play();
 
-    FuenteTitulo.loadFromFile("TOMB.ttf");
+    FuenteTitulo.loadFromFile("deadjim.ttf");
+    FuenteJuego.loadFromFile("daville.ttf");
 
     CrearTextos();
+
+    CrearBordes();
 }
 
 void Juego::EmpezarJuego()

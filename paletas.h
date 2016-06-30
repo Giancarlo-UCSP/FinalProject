@@ -3,15 +3,20 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "bola.h"
+
+class Bola;
+
 class Paleta : public sf::RectangleShape
 {
 private:
     float VelocidadMovimiento;
+    float speed;
 public:
     Paleta();
     void MovimientoJugador();
     void MovimientoJugador2();
-    void MovimientoPC();
+    void MovimientoPC(sf::Time& Tiempo, Bola& Ball);
 };
 
 #endif // PALETAS_H_INCLUDED

@@ -17,12 +17,40 @@ void Juego::SeleccionarOpciones()
             VentanaPrincipal.draw(Lista);
             break;
 
-        case Jugando:
+        case CantidadJugadores:
+            VentanaPrincipal.draw(FondoMenu);
+            VentanaPrincipal.draw(Titulo);
+            VentanaPrincipal.draw(MenuJugadores);
+            break;
+
+        case JugandoUnJugador:
+            Tiempo=Reloj.restart();
             VentanaPrincipal.draw(FondoJuego);
             VentanaPrincipal.draw(Jugador1);
             VentanaPrincipal.draw(Jugador2);
+            VentanaPrincipal.draw(BolaJuego);
+            VentanaPrincipal.draw(BordeAba);
+            VentanaPrincipal.draw(BordeArr);
+            VentanaPrincipal.draw(BordeIzq);
+            VentanaPrincipal.draw(BordeDer);
+            Jugador1.MovimientoJugador();
+            BolaJuego.MovimientoBola(Tiempo,Jugador1,Jugador2);
+            Jugador2.MovimientoPC(Tiempo,BolaJuego);
+            break;
+
+        case JugandoDosJugadores:
+            Tiempo=Reloj.restart();
+            VentanaPrincipal.draw(FondoJuego);
+            VentanaPrincipal.draw(Jugador1);
+            VentanaPrincipal.draw(Jugador2);
+            VentanaPrincipal.draw(BolaJuego);
+            VentanaPrincipal.draw(BordeAba);
+            VentanaPrincipal.draw(BordeArr);
+            VentanaPrincipal.draw(BordeIzq);
+            VentanaPrincipal.draw(BordeDer);
             Jugador1.MovimientoJugador();
             Jugador2.MovimientoJugador2();
+            BolaJuego.MovimientoBola(Tiempo,Jugador1,Jugador2);
             break;
 
         case MostrarInstrucciones:
@@ -56,7 +84,17 @@ void Juego::RestriccionesMenu()
 
             if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::Num1) && (Estado == Menu))
             {
-                Estado = Jugando;
+                Estado = CantidadJugadores;
+            }
+
+            if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::A) && (Estado == CantidadJugadores))
+            {
+                Estado = JugandoUnJugador;
+            }
+
+            if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::Z) && (Estado == CantidadJugadores))
+            {
+                Estado = JugandoDosJugadores;
             }
 
             if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::Num2) && (Estado == Menu))
