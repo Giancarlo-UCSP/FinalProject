@@ -45,8 +45,10 @@
 		<Unit filename="juego.cpp" />
 		<Unit filename="juego.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="paletas.cpp" />
+		<Unit filename="paletas.h" />
+		<Unit filename="procesos.cpp" />
 		<Unit filename="texto.cpp" />
-		<Unit filename="texto.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

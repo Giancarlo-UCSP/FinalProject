@@ -380,14 +380,14 @@
 	<string>
 	<vector>
 
-1467231987 source:c:\users\gianc\documents\finalproject\juego.cpp
+1467248660 source:c:\users\gianc\documents\finalproject\juego.cpp
 	"juego.h"
 
-1467231989 c:\users\gianc\documents\finalproject\juego.h
+1467247548 c:\users\gianc\documents\finalproject\juego.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"configuracion.h"
-	"texto.h"
+	"paletas.h"
 
 1429780453 c:\users\gianc\documents\finalproject\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -870,15 +870,32 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1467232009 c:\users\gianc\documents\finalproject\configuracion.h
+1467247937 c:\users\gianc\documents\finalproject\configuracion.h
 
-1467231501 c:\users\gianc\documents\finalproject\texto.h
+1467237569 c:\users\gianc\documents\finalproject\texto.h
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1467228220 source:c:\users\gianc\documents\finalproject\main.cpp
+1467237918 source:c:\users\gianc\documents\finalproject\main.cpp
 	"juego.h"
 
-1467231989 source:c:\users\gianc\documents\finalproject\texto.cpp
+1467237774 source:c:\users\gianc\documents\finalproject\texto.cpp
 	"juego.h"
+
+1467247622 source:c:\users\gianc\documents\finalproject\procesos.cpp
+	"juego.h"
+
+1467242639 c:\users\gianc\documents\finalproject\textomenu.h
+	<SFML/Graphics.hpp>
+	"juego.h"
+
+1467242577 source:c:\users\gianc\documents\finalproject\textomenu.cpp
+	"juego.h"
+
+1467248005 c:\users\gianc\documents\finalproject\paletas.h
+	<SFML/Graphics.hpp>
+
+1467248576 source:c:\users\gianc\documents\finalproject\paletas.cpp
+	"paletas.h"
+	"configuracion.h"
 
