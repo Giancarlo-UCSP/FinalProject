@@ -41,6 +41,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="bola.cpp" />
+		<Unit filename="bola.h" />
 		<Unit filename="configuracion.h" />
 		<Unit filename="juego.cpp" />
 		<Unit filename="juego.h" />
