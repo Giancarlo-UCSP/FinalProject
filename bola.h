@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include "score.h"
 
 class Bola : public sf::Sprite
 {
@@ -13,7 +14,7 @@ private:
     sf::SoundBuffer Buffer;
 public:
     Bola();
-    void MovimientoBola(sf::Time& Tiempo, sf::RectangleShape & P1, sf::RectangleShape & P2);
+    void MovimientoBola(sf::Time& Tiempo,sf::Clock& Reloj, sf::RectangleShape & P1, sf::RectangleShape & P2, Score& Punt);
     float getVelocidadX();
 };
 

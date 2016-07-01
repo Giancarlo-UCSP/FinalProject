@@ -2,8 +2,7 @@
 
 int main()
 {
-    Juego Pong;
-    Pong.EmpezarJuego();
-
-    return 0;
+    Juego* Pong = Juego::getSingleton();
+    Pong->EmpezarJuego();
+    delete Juego::getSingleton();
 }

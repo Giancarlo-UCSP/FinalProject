@@ -50,22 +50,20 @@ void Paleta::MovimientoJugador2()
     }
 }
 
-void Paleta::MovimientoPC(sf::Time& Tiempo, Bola& Ball)
+void Paleta::MovimientoPC(Bola& Ball)
 {
-    this->setOrigin(-787,-300);
+    this->setOrigin(-787,-20);
     this->setFillColor(sf::Color(227,168,105));
     this->setOutlineColor(sf::Color(139,69,19));
 
     float Top = this->getGlobalBounds().top;
     float Bottom = this->getGlobalBounds().top + this->getGlobalBounds().height;
 
-    if (Ball.getVelocidadX() >= 0 && Ball.getPosition().x >= Ancho/2.0f)
-    {
-        if(this->getPosition().y < Ball.getPosition().y)
-			this->move(0, -this->speed * Tiempo.asSeconds());
-		if(this->getPosition().y > Ball.getPosition().y)
-			this->move(0, this->speed * Tiempo.asSeconds());
-    }
+    if ((Ball.getPosition().y < this->getPosition().y) && Top > 0)
+		this->move(0, -VelocidadMovimiento/20.0);
+
+    else if(((Ball.getPosition().y + 20) > (this->getPosition().y+this->getSize().y)) && Bottom < Alto)
+		this->move(0, VelocidadMovimiento/20.0);
 }
 
 

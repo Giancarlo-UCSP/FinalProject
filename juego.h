@@ -5,8 +5,10 @@
 #include <SFML/Audio.hpp>
 
 #include "configuracion.h"
+#include "pantallas.h"
 #include "paletas.h"
 #include "bola.h"
+#include "score.h"
 
 class Juego
 {
@@ -29,7 +31,7 @@ private:
     sf::Event EventoJuego;
 
     int Estado = Espera;
-    enum EstadosJuego {Espera, Menu, CantidadJugadores, MostrarInstrucciones, MostrarCreditos, JugandoUnJugador, JugandoDosJugadores};
+    enum EstadosJuego {Espera, Menu, CantidadJugadores, MostrarInstrucciones, MostrarCreditos, JugandoUnJugador, JugandoDosJugadores, GanoJugador1, GanoJugador2};
 
     sf::Text Titulo;
     sf::Text Press;
@@ -38,21 +40,28 @@ private:
     sf::Text Instrucciones;
     sf::Text Creditos;
 
-    sf::RectangleShape BordeIzq;
-    sf::RectangleShape BordeDer;
-    sf::RectangleShape BordeArr;
-    sf::RectangleShape BordeAba;
+    PantallaInicial PI;
+    PantallaMenu PM;
+    PantallaJugadores PJ;
+    PantallaInstrucciones PIn;
+    PantallaCreditos PC;
 
     Bola BolaJuego;
     Paleta Jugador1;
     Paleta Jugador2;
+    Score ScoreJuego;
 
-public:
-    Juego();
     void CrearTextos();
-    void CrearBordes();
     void SeleccionarOpciones();
     void RestriccionesMenu();
+    void VerificarGanador();
+
+    //Singleton
+    Juego();
+    static Juego* Singleton;
+public:
+    //Singleton
+    static Juego* getSingleton();
     void EmpezarJuego();
 };
 #endif // JUEGO_H_INCLUDED

@@ -38,22 +38,3 @@ void Juego::CrearTextos()
     Creditos.setColor(sf::Color::White);
     Creditos.setFont(FuenteJuego);
 }
-
-void Juego::CrearBordes()
-{
-    BordeArr.setPosition(0,0);
-    BordeArr.setSize(sf::Vector2f(Ancho,3));
-    BordeArr.setFillColor(sf::Color::Black);
-
-    BordeAba.setPosition(0, Alto-3);
-    BordeAba.setSize(sf::Vector2f(Ancho,3));
-    BordeAba.setFillColor(sf::Color::Black);
-
-    BordeIzq.setPosition(0,0);
-    BordeIzq.setSize(sf::Vector2f(3,Alto));
-    BordeIzq.setFillColor(sf::Color::Black);
-
-    BordeDer.setPosition((Ancho-3),0);
-    BordeDer.setSize(sf::Vector2f(3,Alto));
-    BordeDer.setFillColor(sf::Color::Black);
-}

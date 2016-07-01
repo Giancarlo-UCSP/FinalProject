@@ -1,5 +1,8 @@
 #include "juego.h"
 
+//Singleton
+Juego* Juego::Singleton = nullptr;
+
 Juego::Juego()
 {
     VentanaPrincipal.create(sf::VideoMode(Ancho,Alto),"Pong!");
@@ -19,8 +22,6 @@ Juego::Juego()
     FuenteJuego.loadFromFile("daville.ttf");
 
     CrearTextos();
-
-    CrearBordes();
 }
 
 void Juego::EmpezarJuego()
@@ -36,3 +37,12 @@ void Juego::EmpezarJuego()
         VentanaPrincipal.display();
     }
 }
+
+//Singleton
+Juego* Juego::getSingleton()
+{
+    if(!Singleton)
+        Singleton = new Juego();
+    return Singleton;
+}
+

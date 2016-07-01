@@ -2,22 +2,24 @@
 
 void Juego::SeleccionarOpciones()
 {
-
     switch (Estado)
         {
         case Espera:
+            PI.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
             VentanaPrincipal.draw(Press);
             break;
 
         case Menu:
+            PM.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
             VentanaPrincipal.draw(Lista);
             break;
 
         case CantidadJugadores:
+            PJ.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
             VentanaPrincipal.draw(MenuJugadores);
@@ -29,13 +31,11 @@ void Juego::SeleccionarOpciones()
             VentanaPrincipal.draw(Jugador1);
             VentanaPrincipal.draw(Jugador2);
             VentanaPrincipal.draw(BolaJuego);
-            VentanaPrincipal.draw(BordeAba);
-            VentanaPrincipal.draw(BordeArr);
-            VentanaPrincipal.draw(BordeIzq);
-            VentanaPrincipal.draw(BordeDer);
             Jugador1.MovimientoJugador();
-            BolaJuego.MovimientoBola(Tiempo,Jugador1,Jugador2);
-            Jugador2.MovimientoPC(Tiempo,BolaJuego);
+            BolaJuego.MovimientoBola(Tiempo,Reloj,Jugador1,Jugador2,ScoreJuego);
+            Jugador2.MovimientoPC(BolaJuego);
+            ScoreJuego.MostrarScore(VentanaPrincipal);
+            VerificarGanador();
             break;
 
         case JugandoDosJugadores:
@@ -44,22 +44,32 @@ void Juego::SeleccionarOpciones()
             VentanaPrincipal.draw(Jugador1);
             VentanaPrincipal.draw(Jugador2);
             VentanaPrincipal.draw(BolaJuego);
-            VentanaPrincipal.draw(BordeAba);
-            VentanaPrincipal.draw(BordeArr);
-            VentanaPrincipal.draw(BordeIzq);
-            VentanaPrincipal.draw(BordeDer);
             Jugador1.MovimientoJugador();
             Jugador2.MovimientoJugador2();
-            BolaJuego.MovimientoBola(Tiempo,Jugador1,Jugador2);
+            BolaJuego.MovimientoBola(Tiempo,Reloj,Jugador1,Jugador2,ScoreJuego);
+            ScoreJuego.MostrarScore(VentanaPrincipal);
+            VerificarGanador();
+            break;
+
+        case GanoJugador1:
+            VentanaPrincipal.draw(FondoMenu);
+            VentanaPrincipal.draw(Titulo);
+            break;
+
+        case GanoJugador2:
+            VentanaPrincipal.draw(FondoMenu);
+            VentanaPrincipal.draw(Titulo);
             break;
 
         case MostrarInstrucciones:
+            PIn.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
             VentanaPrincipal.draw(Instrucciones);
             break;
 
         case MostrarCreditos:
+            PC.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
             VentanaPrincipal.draw(Creditos);
@@ -122,4 +132,13 @@ void Juego::RestriccionesMenu()
                 VentanaPrincipal.close();
             }
         }
+}
+
+void Juego::VerificarGanador()
+{
+    if ((ScoreJuego.getPuntosJugador1()) >= 11 && (ScoreJuego.getPuntosJugador1()) >= ((ScoreJuego.getPuntosJugador2()) + 2))
+        Estado = GanoJugador1;
+
+    if ((ScoreJuego.getPuntosJugador2()) >= 11 && (ScoreJuego.getPuntosJugador2()) >= ((ScoreJuego.getPuntosJugador1()) + 2))
+        Estado = GanoJugador2;
 }

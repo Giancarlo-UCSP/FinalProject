@@ -16,7 +16,7 @@ public:
     Paleta();
     void MovimientoJugador();
     void MovimientoJugador2();
-    void MovimientoPC(sf::Time& Tiempo, Bola& Ball);
+    void MovimientoPC(Bola& Ball);
 };
 
 #endif // PALETAS_H_INCLUDED

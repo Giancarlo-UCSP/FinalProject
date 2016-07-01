@@ -380,15 +380,17 @@
 	<string>
 	<vector>
 
-1467254417 source:c:\users\gianc\documents\finalproject\juego.cpp
+1467334521 source:c:\users\gianc\documents\finalproject\juego.cpp
 	"juego.h"
 
-1467256881 c:\users\gianc\documents\finalproject\juego.h
+1467334511 c:\users\gianc\documents\finalproject\juego.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"configuracion.h"
+	"pantallas.h"
 	"paletas.h"
 	"bola.h"
+	"score.h"
 
 1429780453 c:\users\gianc\documents\finalproject\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -877,13 +879,13 @@
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1467237918 source:c:\users\gianc\documents\finalproject\main.cpp
+1467334563 source:c:\users\gianc\documents\finalproject\main.cpp
 	"juego.h"
 
-1467254408 source:c:\users\gianc\documents\finalproject\texto.cpp
+1467331219 source:c:\users\gianc\documents\finalproject\texto.cpp
 	"juego.h"
 
-1467259247 source:c:\users\gianc\documents\finalproject\procesos.cpp
+1467332632 source:c:\users\gianc\documents\finalproject\procesos.cpp
 	"juego.h"
 
 1467242639 c:\users\gianc\documents\finalproject\textomenu.h
@@ -893,19 +895,36 @@
 1467242577 source:c:\users\gianc\documents\finalproject\textomenu.cpp
 	"juego.h"
 
-1467259196 c:\users\gianc\documents\finalproject\paletas.h
+1467327597 c:\users\gianc\documents\finalproject\paletas.h
 	<SFML/Graphics.hpp>
 	"bola.h"
 
-1467259222 source:c:\users\gianc\documents\finalproject\paletas.cpp
+1467327965 source:c:\users\gianc\documents\finalproject\paletas.cpp
 	"paletas.h"
 	"configuracion.h"
 
-1467258162 source:c:\users\gianc\documents\finalproject\bola.cpp
+1467329023 source:c:\users\gianc\documents\finalproject\bola.cpp
 	"bola.h"
 	"configuracion.h"
 
-1467258139 c:\users\gianc\documents\finalproject\bola.h
+1467327659 c:\users\gianc\documents\finalproject\bola.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
+	"score.h"
+
+1467328890 c:\users\gianc\documents\finalproject\score.h
+	<SFML/Graphics.hpp>
+	<string>
+	<sstream>
+
+1467328483 source:c:\users\gianc\documents\finalproject\score.cpp
+	"score.h"
+
+1467332677 c:\users\gianc\documents\finalproject\pantallas.h
+	<SFML/Graphics.hpp>
+
+1467332729 source:c:\users\gianc\documents\finalproject\pantallas.cpp
+	"pantallas.h"
+
+1467334180 source:c:\users\gianc\documents\finalproject\singleton.cpp
 
