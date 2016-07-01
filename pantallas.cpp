@@ -109,3 +109,47 @@ void PantallaCreditos::MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fo
     Ventana.draw(Titulo);
     Ventana.draw(Contenido);
 }
+
+void PantallaWinJ1::MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fondo)
+{
+    FuenteTitulo.loadFromFile("deadjim.ttf");
+    FuenteContenido.loadFromFile("daville.ttf");
+
+    Titulo.setString("PONG!");
+    Titulo.setPosition(170,70);
+    Titulo.setCharacterSize(200);
+    Titulo.setColor(sf::Color(154,205,50));
+    Titulo.setFont(FuenteTitulo);
+
+    Contenido.setString("El Jugador 1 ganó.");
+    Contenido.setPosition(200,300);
+    Contenido.setCharacterSize(40);
+    Contenido.setColor(sf::Color::White);
+    Contenido.setFont(FuenteContenido);
+
+    Ventana.draw(Fondo);
+    Ventana.draw(Titulo);
+    Ventana.draw(Contenido);
+}
+
+void PantallaWinJ2::MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fondo)
+{
+    FuenteTitulo.loadFromFile("deadjim.ttf");
+    FuenteContenido.loadFromFile("daville.ttf");
+
+    Titulo.setString("PONG!");
+    Titulo.setPosition(170,70);
+    Titulo.setCharacterSize(200);
+    Titulo.setColor(sf::Color(154,205,50));
+    Titulo.setFont(FuenteTitulo);
+
+    Contenido.setString("El Jugador 2 ganó.");
+    Contenido.setPosition(200,300);
+    Contenido.setCharacterSize(40);
+    Contenido.setColor(sf::Color::White);
+    Contenido.setFont(FuenteContenido);
+
+    Ventana.draw(Fondo);
+    Ventana.draw(Titulo);
+    Ventana.draw(Contenido);
+}

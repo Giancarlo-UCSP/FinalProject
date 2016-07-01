@@ -44,6 +44,18 @@ public:
     void MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fondo);
 };
 
+class PantallaWinJ1 : public Pantallas
+{
+public:
+    void MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fondo);
+};
+
+class PantallaWinJ2 : public Pantallas
+{
+public:
+    void MostrarPantalla(sf::RenderWindow& Ventana, sf::Sprite& Fondo);
+};
+
 
 
 

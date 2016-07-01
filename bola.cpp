@@ -25,7 +25,7 @@ void Bola::MovimientoBola(sf::Time& Tiempo, sf::Clock& Reloj, sf::RectangleShape
 
     if (IzquierdaBola < 0 && VelocidadBola.x < 0)
     {
-        this->VelocidadBola.x *= -1;
+        this->VelocidadBola.x *= 1.05;
         this->SonidoBola.play();
         Punt.AnadirPuntoJugador2();
         this->setOrigin(this->getGlobalBounds().width/10.0f, this->getGlobalBounds().height/10.0f);
@@ -34,7 +34,7 @@ void Bola::MovimientoBola(sf::Time& Tiempo, sf::Clock& Reloj, sf::RectangleShape
 
     if (DerechaBola > Ancho && VelocidadBola.x > 0)
     {
-        this->VelocidadBola.x*= -1;
+        this->VelocidadBola.x*= 1.05;
         this->SonidoBola.play();
         Punt.AnadirPuntoJugador1();
         this->setOrigin(this->getGlobalBounds().width/10.0f, this->getGlobalBounds().height/10.0f);

@@ -52,13 +52,19 @@ void Juego::SeleccionarOpciones()
             break;
 
         case GanoJugador1:
+            J1.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
+            VentanaPrincipal.draw(WinJ1);
+            ScoreJuego.MostrarScoreFinal(VentanaPrincipal);
             break;
 
         case GanoJugador2:
+            J2.MostrarPantalla(VentanaPrincipal,FondoMenu);
             VentanaPrincipal.draw(FondoMenu);
             VentanaPrincipal.draw(Titulo);
+            VentanaPrincipal.draw(WinJ2);
+            ScoreJuego.MostrarScoreFinal(VentanaPrincipal);
             break;
 
         case MostrarInstrucciones:
@@ -130,6 +136,16 @@ void Juego::RestriccionesMenu()
             if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::Num4) && (Estado == Menu))
             {
                 VentanaPrincipal.close();
+            }
+
+            if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::N) && ((Estado == GanoJugador1) || (Estado == GanoJugador2)))
+            {
+                Estado = CantidadJugadores;
+            }
+
+            if ((EventoJuego.type == sf::Event::KeyPressed) && (EventoJuego.key.code==sf::Keyboard::B) && ((Estado == GanoJugador1) || (Estado == GanoJugador2)))
+            {
+                Estado = Menu;
             }
         }
 }

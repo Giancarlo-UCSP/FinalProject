@@ -19,6 +19,7 @@ private:
 public:
     Score();
     void MostrarScore(sf::RenderWindow& Ventana);
+    void MostrarScoreFinal(sf::RenderWindow& Ventana);
     void AnadirPuntoJugador1();
     void AnadirPuntoJugador2();
     int getPuntosJugador1();

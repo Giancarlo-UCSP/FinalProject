@@ -60,10 +60,10 @@ void Paleta::MovimientoPC(Bola& Ball)
     float Bottom = this->getGlobalBounds().top + this->getGlobalBounds().height;
 
     if ((Ball.getPosition().y < this->getPosition().y) && Top > 0)
-		this->move(0, -VelocidadMovimiento/20.0);
+		this->move(0, -VelocidadMovimiento/15.0);
 
     else if(((Ball.getPosition().y + 20) > (this->getPosition().y+this->getSize().y)) && Bottom < Alto)
-		this->move(0, VelocidadMovimiento/20.0);
+		this->move(0, VelocidadMovimiento/15.0);
 }
 
 

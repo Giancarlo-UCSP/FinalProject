@@ -37,4 +37,16 @@ void Juego::CrearTextos()
     Creditos.setCharacterSize(25);
     Creditos.setColor(sf::Color::White);
     Creditos.setFont(FuenteJuego);
+
+    WinJ1.setString("El Jugador 1 ganó.");
+    WinJ1.setPosition(200,300);
+    WinJ1.setCharacterSize(40);
+    WinJ1.setColor(sf::Color::White);
+    WinJ1.setFont(FuenteJuego);
+
+    WinJ2.setString("El Jugador 2 ganó.");
+    WinJ2.setPosition(200,300);
+    WinJ2.setCharacterSize(40);
+    WinJ2.setColor(sf::Color::White);
+    WinJ2.setFont(FuenteJuego);
 }

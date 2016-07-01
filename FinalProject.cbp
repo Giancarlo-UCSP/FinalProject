@@ -49,7 +49,11 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="paletas.cpp" />
 		<Unit filename="paletas.h" />
+		<Unit filename="pantallas.cpp" />
+		<Unit filename="pantallas.h" />
 		<Unit filename="procesos.cpp" />
+		<Unit filename="score.cpp" />
+		<Unit filename="score.h" />
 		<Unit filename="texto.cpp" />
 		<Extensions>
 			<code_completion />

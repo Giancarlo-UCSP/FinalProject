@@ -39,12 +39,16 @@ private:
     sf::Text MenuJugadores;
     sf::Text Instrucciones;
     sf::Text Creditos;
+    sf::Text WinJ1;
+    sf::Text WinJ2;
 
     PantallaInicial PI;
     PantallaMenu PM;
     PantallaJugadores PJ;
     PantallaInstrucciones PIn;
     PantallaCreditos PC;
+    PantallaWinJ1 J1;
+    PantallaWinJ2 J2;
 
     Bola BolaJuego;
     Paleta Jugador1;
